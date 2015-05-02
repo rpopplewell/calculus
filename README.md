@@ -31,3 +31,6 @@ In addition, you can also evaluate the function at a certain point using `f.Eval
 ```go
   fmt.Printf("The value of %s when x = 20 is %g\n", f.Name(), f.Eval(20))
 ```
+<h3>TODO</h3>
+* Implement Risch Algorithm
+* Implement Symbolic Differentiation via Heuristics etc.
