@@ -8,20 +8,20 @@ import (
 )
 
 type Function struct {
-	f string
+	F string
 }
 
 func (fnc *Function) SetFunc(name string) {
-    fnc.f = name
+  fnc.F = name
 }
 
 func (fnc Function) Name() string {
-    return fnc.f
+  return fnc.F
 }
 
 func (fnc Function) Eval(val float64) float64 {
 	num := strconv.FormatFloat(val, 'G', -1, 64)
-	result, err := compute.Evaluate(strings.Replace(fnc.f, "x", num, -1))
+	result, err := compute.Evaluate(strings.Replace(fnc.F, "x", num, -1))
 	if err != nil {
 		log.Fatal(err)
 	}

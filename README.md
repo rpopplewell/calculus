@@ -14,10 +14,7 @@ import (
 
 func main() {
   // Create a new function.
-  f := clc.Function{}
-
-  // Input the desired expression.
-  f.SetFunc("1/(x^2+1)")
+  f := clc.Function{"1/(x^2+1)"}
 
   // Integrate from 0 to 20.
   fmt.Println(f.AntiDiff(0, 20))
