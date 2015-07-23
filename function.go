@@ -15,7 +15,7 @@ func (fnc *Function) SetFunc(name string) {
   fnc.F = name
 }
 
-func (fnc Function) Name() string {
+func (fnc Function) GetFunc() string {
   return fnc.F
 }
 
