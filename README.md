@@ -30,4 +30,4 @@ In addition, you can also evaluate the function at a certain point using `f.Eval
 ```
 <h3>TODO</h3>
 * Implement Risch Algorithm
-* Implement Symbolic Differentiation via Heuristics etc.
+* Implement Symbolic Differentiation Patterns

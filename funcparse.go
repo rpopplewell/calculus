@@ -72,8 +72,3 @@ func IsTerm(ops string, chars []string, i int) bool {
   }
   return false
 }
-
-func (fnc Function) SymDiff() string {
-  toks := fnc.Parse()
-  return toks
-}
