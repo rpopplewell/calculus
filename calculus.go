@@ -4,10 +4,10 @@ import (
 	"math"
 )
 
-func (fnc Function) SymDiff() string {
-	toks := fnc.Parse()
-	
-}
+// func (fnc Function) SymDiff() string {
+// 	toks := fnc.Parse()
+//
+// }
 
 func (fnc Function) Diff(point float64, usrprec ...int) float64 {
 	var prec int
