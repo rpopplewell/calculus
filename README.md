@@ -1,5 +1,6 @@
 # Go Calculus
 <a href="https://godoc.org/github.com/TheDemx27/calculus"><img src="https://godoc.org/github.com/TheDemx27/calculus?status.svg" alt="GoDoc"></a>
+[![Build Status](https://drone.io/github.com/TheDemx27/calculus/status.png)](https://drone.io/github.com/TheDemx27/calculus/latest)
 
 A golang library supporting single variable definite integration and differentiation. The `AntiDiff()` function uses Simpson's Rule, meaning integration of quadratics and other "curved" functions are much more accurate for a given sample size when compared to the Riemann sum method.
 <h3>Usage</h3>
