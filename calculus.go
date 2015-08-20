@@ -4,29 +4,20 @@ import (
 	"math"
 )
 
-// func (fnc Function) SymDiff() string {
-// 	toks := fnc.Parse()
-//
+// func (fnc Function) SymDiff() []string {
+// 	fnc.Parse()
+// 	toks := fnc.GetToksAbstract()
+// 	return toks
 // }
 
-func (fnc Function) Diff(point float64, usrprec ...int) float64 {
-	var prec int
-	if len(usrprec) > 0 {
-		prec = usrprec[0]
-	} else {
-		prec = 100000
-	}
+func (fnc Function) Diff(point float64, usrPrec ...int) float64 {
+	prec := SetPrec(10000000, usrPrec)
 	h := 1 / float64(prec)
 	return (fnc.Eval(point+h) - fnc.Eval(point)) / h
 }
 
-func (fnc Function) AntiDiff(lower float64, upper float64, usrprec ...int) float64 {
-	var prec int
-	if len(usrprec) > 0 {
-		prec = usrprec[0]
-	} else {
-		prec = 1000
-	}
+func (fnc Function) AntiDiff(lower float64, upper float64, usrPrec ...int) float64 {
+	prec := SetPrec(1000, usrPrec)
 	parts := make([]float64, 2*prec+1)
 	r := upper - lower
 	nf := float64(prec)
@@ -74,4 +65,14 @@ func sum(v []float64) float64 {
 		sum += x
 	}
 	return sum
+}
+
+func SetPrec(defaultPrec int, usrPrec []int) int {
+	var prec int
+	if len(usrPrec) > 0 {
+		prec = usrPrec[0]
+	} else {
+		prec = defaultPrec
+	}
+	return prec
 }
