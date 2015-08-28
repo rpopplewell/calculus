@@ -1,12 +1,15 @@
 package calculus
 
-import "strings"
+import (
+	"strings"
+	"regexp"
+)
 
 // i => term index in function
 // [i][0] => constant/variable
 // [i][1] => value
 
-func (fnc Function) Parse() {
+func (fnc Function) Parse() [][]string {
 	chars := strings.Split(fnc.F, "")
 	chars = append(chars, " ")
 	var tok string
@@ -17,10 +20,10 @@ func (fnc Function) Parse() {
 		"arcsin", "arccos", "arctan",
 		"arccot", "arcsec", "arccsc",
 		"ln", "log"}
-	terms := CountTerms(ops, fncs, chars)
-	toks := make([][]string, terms)
+	termNumber := CountTerms(ops, fncs, chars)
+	toks := make([][]string, termNumber)
 
-  termIndex := 0
+  	termIndex := 0
 	for i := 0; i < len(chars); i++ {
 		tok += chars[i]
 
@@ -48,9 +51,14 @@ func (fnc Function) Parse() {
 			}
 			termIndex++
 		}
-
 	}
-	fnc.Toks = toks
+	return toks
+}
+
+func GroupTerms(exp string) string {
+	for i := 0; i < len(toks); i++ {
+		if IsTerm(ops, chars, i) {
+	}
 }
 
 func CountTerms(ops string, fncs [14]string, chars []string) int {

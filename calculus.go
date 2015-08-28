@@ -4,10 +4,35 @@ import (
 	"math"
 )
 
-// func (fnc Function) SymDiff() []string {
+func SetPrec(defaultPrec int, usrPrec []int) int {
+	var prec int
+	if len(usrPrec) > 0 {
+		prec = usrPrec[0]
+	} else {
+		prec = defaultPrec
+	}
+	return prec
+}
+
+// func (fnc Function) SymDiff() string {
 // 	fnc.Parse()
-// 	toks := fnc.GetToksAbstract()
-// 	return toks
+//	exp := GroupTerms(fnc.GetToksAbstract, fnc.GetToksLit())
+	
+// 	switch (exp) {
+// 		case "C*V":
+// 		case "C*V^C":
+// 		case "C*V^V":
+// 		case "ln(V)":
+// 		case "sin(V)":
+// 		case "cos(V)":
+// 		case "-sin(V)":
+// 		case "-cos(V)":
+// 		case "1/V":
+// 		case "V*V":
+// 		case "V/V":
+// 		case "":
+// 	}
+// 	return exp
 // }
 
 func (fnc Function) Diff(point float64, usrPrec ...int) float64 {
@@ -65,14 +90,4 @@ func sum(v []float64) float64 {
 		sum += x
 	}
 	return sum
-}
-
-func SetPrec(defaultPrec int, usrPrec []int) int {
-	var prec int
-	if len(usrPrec) > 0 {
-		prec = usrPrec[0]
-	} else {
-		prec = defaultPrec
-	}
-	return prec
 }

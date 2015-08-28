@@ -26,22 +26,26 @@ func (fnc Function) GetFunc() string {
 	return fnc.F
 }
 
-func (fnc Function) GetToks() []string {
-	fnc.Parse()
-	var RegToks []string
-	for i := 0; i < len(fnc.Toks); i++ {
-		RegToks = append(RegToks, fnc.Toks[i][1])
-	}
-	return RegToks
+func (fnc Function) GetToksLit() string {
+	return fnc.GetToks(1)
 }
 
-func (fnc Function) GetToksAbstract() []string {
-	fnc.Parse()
-	var ToksAbs []string
+func (fnc Function) GetToksAbstract() string {
+	return fnc.GetToks(0)
+}
+
+func (fnc Function) GetToks(j int) string {
+	var tokArray []string
+	var tokString string
+	
+	fnc.Toks = fnc.Parse()	
 	for i := 0; i < len(fnc.Toks); i++ {
-		ToksAbs = append(ToksAbs, fnc.Toks[i][0])
+		tokArray = append(tokArray, fnc.Toks[i][j])
 	}
-	return ToksAbs
+	for i := 0; i < len(tokArray); i++ {
+		tokString = tokString + tokArray[i]
+	}
+	return tokString
 }
 
 func (fnc Function) Eval(val float64) float64 {
