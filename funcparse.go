@@ -2,7 +2,7 @@ package calculus
 
 import (
 	"strings"
-	"regexp"
+	// "regexp"
 )
 
 // i => term index in function
@@ -55,11 +55,12 @@ func (fnc Function) Parse() [][]string {
 	return toks
 }
 
-func GroupTerms(exp string) string {
-	for i := 0; i < len(toks); i++ {
-		if IsTerm(ops, chars, i) {
-	}
-}
+// func GroupTerms(exp string) string {
+// 	for i := 0; i < len(toks); i++ {
+// 		if IsTerm(ops, chars, i) {
+// 		}
+// 	}
+// }
 
 func CountTerms(ops string, fncs [14]string, chars []string) int {
 	var termNum int = 0

@@ -10,12 +10,13 @@ package main
 
 import (
   "fmt"
+  "math"
   clc "github.com/TheDemx27/calculus"
 )
 
 func main() {
   // Create a new function.
-  f := clc.Function{"1/(x^2+1)"}
+  f := clc.NewFunc("1/(x^2+1)")
 
   // Integrate from 0 to 20.
   fmt.Println(f.AntiDiff(0, 20))
