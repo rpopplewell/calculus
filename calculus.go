@@ -1,7 +1,8 @@
-package calculus
+package calculus // import "github.com/TheDemx27/calculus"
 
 import (
 	"math"
+	"fmt"
 )
 
 func SetPrec(defaultPrec int, usrPrec []int) int {
@@ -14,26 +15,27 @@ func SetPrec(defaultPrec int, usrPrec []int) int {
 	return prec
 }
 
-// func (fnc Function) SymDiff() string {
-// 	fnc.Parse()
-//	exp := GroupTerms(fnc.GetToksAbstract, fnc.GetToksLit())
-	
-// 	switch (exp) {
-// 		case "C*V":
-// 		case "C*V^C":
-// 		case "C*V^V":
-// 		case "ln(V)":
-// 		case "sin(V)":
-// 		case "cos(V)":
-// 		case "-sin(V)":
-// 		case "-cos(V)":
-// 		case "1/V":
-// 		case "V*V":
-// 		case "V/V":
-// 		case "":
-// 	}
-// 	return exp
-// }
+func (fnc Function) SymDiff() string {
+	 fmt.Println(fnc.ParseToks())
+	 return "compiles..."
+	// exp := GroupTerms(fnc.GetToksAbstract, fnc.GetToksLit())
+	//
+	// switch (exp) {
+	// 	case "C*V":
+	// 	case "C*V^C":
+	// 	case "C*V^V":
+	// 	case "ln(V)":
+	// 	case "sin(V)":
+	// 	case "cos(V)":
+	// 	case "-sin(V)":
+	// 	case "-cos(V)":
+	// 	case "1/V":
+	// 	case "V*V":
+	// 	case "V/V":
+	// 	case "":
+	// }
+	// return exp
+}
 
 func (fnc Function) Diff(point float64, usrPrec ...int) float64 {
 	prec := SetPrec(10000000, usrPrec)
