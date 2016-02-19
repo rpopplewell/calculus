@@ -37,7 +37,7 @@ func main() {
 }
 ```
 In all cases, adding an additional `int` argument will specify how many samples you want to use.
-In addition, you can also evaluate the function at a certain point using `f.Eval()`, and return the expression defining the function using `f.Name()`, e.g.
+You can also evaluate the function at a certain point using `f.Eval()`, and return the expression defining the function using `f.Name()`, e.g.
 ```go
   fmt.Printf("The value of %s when x = 20 is %g\n", f.Name(), f.Eval(20))
 ```
