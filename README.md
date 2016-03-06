@@ -1,7 +1,8 @@
 # Go Calculus
 <a href="https://godoc.org/github.com/TheDemx27/calculus"><img src="https://godoc.org/github.com/TheDemx27/calculus?status.svg" alt="GoDoc"></a>
 [![Build Status](https://drone.io/github.com/TheDemx27/calculus/status.png)](https://drone.io/github.com/TheDemx27/calculus/latest)
-
+[![forthebadge](http://forthebadge.com/images/badges/fo-shizzle.svg)](http://forthebadge.com)
+***
 A golang library supporting definite integration and differentiation of real valued, single variable, elementary and non-elementary functions.
 <h3>Usage</h3>
 `~$ go get github.com/TheDemx27/calculus`
