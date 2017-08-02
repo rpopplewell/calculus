@@ -3,7 +3,8 @@
 ***
 A golang library supporting definite integration and differentiation of real valued, single variable, elementary and non-elementary functions.
 <h3>Usage</h3>
-`~$ go get github.com/TheDemx27/calculus`
+```~$ go get github.com/TheDemx27/calculus```
+
 ```go
 package main
 
