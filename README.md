@@ -11,7 +11,7 @@ package main
 import (
   "fmt"
   "math"
-  clc "github.com/TheDemx27/calculus"
+  clc "github.com/rpopplewell/calculus"
 )
 
 func main() {
